@@ -905,14 +905,4 @@ video {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
-
-  .dark\:text-red-800 {
-    --tw-text-opacity: 1;
-    color: rgb(153 27 27 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-blue-800 {
-    --tw-text-opacity: 1;
-    color: rgb(30 64 175 / var(--tw-text-opacity));
-  }
 }
