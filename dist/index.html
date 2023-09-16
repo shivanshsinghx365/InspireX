@@ -14,11 +14,10 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 
-<body class="bg-slate-200 dark:bg-[#383838] dark:text-white">
-    <div class="major">
-        <div class="w-screen">
+<body>
+    <div class="h-full max-w-screen bg-slate-200 dark:bg-[#383838] dark:text-white">
             <!-- Navigation bar -->
-            <div class="flex w-[100%] justify-between py-3 shadow-lg">
+            <div class="flex w-[100%] justify-between py-3 shadow-lg fixed top-0 bg-red-600  text-white">
                 <div class="pl-5">
                     <img src="/images/ai.png" alt="" width="40px" height="40px">
                 </div>
@@ -26,62 +25,100 @@
                     <div>Home</div>
                     <div>Features</div>
                     <div>Team</div>
+                    <div class=" cursor-pointer">
+                        <img src="/images/moon.png" alt="nhi to" width="33px" height="33px">
+                    </div>
                     <div class="text-white rounded-3xl px-4 bg-gradient-to-r from-blue-400 to-purple-700 cursor-pointer">
                         <div>Login</div>
                     </div>
                 </div>
             </div>
-        </div>
         
-        <div class="p-10 flex justify-around text-white ">
-            <div class="text-black flex justify-center items-center dark:text-blue-50">
-                <div>
-                    <h1 class="font-mono font-extrabold text-5xl leading-loose">
-                        Welcome to the New Era of<br>
-                        <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" class="underline decoration-sky-500">#AI</a>
-                    </h1>
-                    <h1 class="bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent text-3xl font-bold font-ubuntu">
-                        Unleash Your Creativity with InspireX ...
-                    </h1>
+            <div class="p-10 pt-28 flex justify-around text-white ">
+                    <div class="text-black flex justify-center items-center dark:text-blue-50">
+                        <div>
+                            <h1 class="font-mono font-extrabold text-5xl leading-loose">
+                                Welcome to the New Era of<br>
+                                <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" class="underline decoration-sky-500">#AI</a>
+                            </h1>
+                            <h1 class="bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent text-3xl font-bold font-ubuntu">
+                                Unleash Your Creativity with InspireX ...
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="iphone flex flex-col justify-end h-[712px] w-[350px] rounded-[55px] shadow-xl overflow-hidden border-[12px] border-black bg-[#313335] dark:bg-[#f2f2f2]">
+                        <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#282c2e] text-sm mr-auto mx-2 mt-1 mb-1 dark:text-black dark:bg-[#e4e4e4]">
+                            <p>Write a couplet on Computers</p>
+                        </div>
+                        <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm ml-auto mx-2 mt-1 mb-1 w-[90%]  dark:text-black dark:bg-[#b3b3b3]">
+                            <p>In circuits dance, logic's symphony hums,<br>
+                                Silicon minds weave dreams, where the future becomes.</p>
+                        </div>
+                        <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#2a2e30] text-sm mr-auto mx-2 mt-1 mb-1  dark:text-black dark:bg-[#e4e4e4]">
+                            <p>A cute puppy astronaut, 3d</p>
+                        </div>
+                        <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm align ml-auto mt-1 mx-2 mb-1  dark:text-black dark:bg-[#b3b3b3] relative">
+                            <img src="/images/puppy.jpeg" alt="a cute little puppy" class="rounded-2xl" width="175px">
+                            <a href="/images/puppy.jpeg" download class="absolute bottom-1 right-1">
+                                <img src="/images/download.png" alt="download_btn" height="28px" width="28px">
+                            </a>
+                        </div>
+                        <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#2a2e30] text-sm mr-auto mx-2 mt-1 mb-1  dark:text-black dark:bg-[#e4e4e4]">
+                            <p>music for studying, peaceful edm</p>
+                        </div>
+                        <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm align ml-auto mt-1 mx-2 mb-1 w-[90%]  dark:text-black dark:bg-[#b3b3b3] relative">
+                            <audio src="/assets/music.mp3" controls class="w-[100%]"></audio>
+                            <a href="/assets/music.mp3" download class="absolute bottom-1 right-1">
+                                <img src="/images/download.png" alt="download_btn" height="28px" width="28px">
+                            </a>
+                        </div>
+                        <div class="flex align-middle">
+                            <div class="bg-black w-[100%] h-10 m-5 rounded-xl text-slate-200 flex justify-center items-center dark:bg-[#b3b3b3]">
+                                <p class="text-center text-neutral-400 dark:text-black">Ask me anything...</p>
+                            </div>
+                            <div class="mr-5 rounded-xl text-slate-200 flex justify-center items-center">
+                                <img src="/assets/up-arrow.png" alt="" width="42px">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="w-[100%] p-10 bg-purple-700 text-white">
+                <div class="max-w-[80%] mx-auto flex justify-around text-white">
+                    <div class="">
+                        <div>
+                            <img src="/images/ai.png" width="60" height="60">
+                        </div>
+                        <p class=" font-bold text-2xl text-center">InspireX</p>
+                    </div>
+                    <div class="">
+                        <h4 class="text-xl font-semibold mb-5">Menu</h4>
+                        <div class="flex flex-col gap-y-3 text-xl">
+                        <p><a class="cursor-pointer hover:underline">About</a></p>
+                        <p><a class="cursor-pointer hover:underline">Features</a></p>
+                        <p><a class="cursor-pointer hover:underline">Team</a></p>
+                        <p><a class="cursor-pointer hover:underline">Contact</a></p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h4 class="text-xl font-semibold mb-5">Services</h4>
+                        <div class="flex flex-col gap-y-3 text-xl">
+                        <p><a class=" cursor-pointer hover:underline">Privacy Policy</a></p>
+                        <p><a class=" cursor-pointer hover:underline">Terms of use</a></p>
+                        <p><a class=" cursor-pointer hover:underline">Refund and Cancaltion</a></p>
+                        </div>
+                    </div>
+                    <div class=" w-[2px] h-60 bg-white"></div>
+                    <div class="flex flex-col text-xl gap-y-6">
+                        <p class=" font-semibold">
+                            GET IN TOUCH
+                        </p>
+                        <p>
+                            <a href="mailto:kyabnarhahu@gmail.com">Email:tummere2@gmail.in</a>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="iphone flex flex-col justify-end h-[712px] w-[350px] rounded-[55px] shadow-xl overflow-hidden border-[12px] border-black bg-[#313335] dark:bg-[#f2f2f2]">
-                <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#282c2e] text-sm mr-auto mx-2 mt-1 mb-1 dark:text-black dark:bg-[#e4e4e4]">
-                    <p>Write a couplet on Computers</p>
-                </div>
-                <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm ml-auto mx-2 mt-1 mb-1 w-[90%]  dark:text-black dark:bg-[#b3b3b3]">
-                    <p>In circuits dance, logic's symphony hums,<br>
-                        Silicon minds weave dreams, where the future becomes.</p>
-                </div>
-                <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#2a2e30] text-sm mr-auto mx-2 mt-1 mb-1  dark:text-black dark:bg-[#e4e4e4]">
-                    <p>A cute puppy astronaut, 3d</p>
-                </div>
-                <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm align ml-auto mt-1 mx-2 mb-1  dark:text-black dark:bg-[#b3b3b3] relative">
-                    <img src="/images/puppy.jpeg" alt="a cute little puppy" class="rounded-2xl" width="175px">
-                    <a href="/images/puppy.jpeg" download class="absolute bottom-1 right-1">
-                        <img src="/images/download.png" alt="download_btn" height="28px" width="28px">
-                    </a>
-                </div>
-                <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#2a2e30] text-sm mr-auto mx-2 mt-1 mb-1  dark:text-black dark:bg-[#e4e4e4]">
-                    <p>music for studying, peaceful edm</p>
-                </div>
-                <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm align ml-auto mt-1 mx-2 mb-1 w-[90%]  dark:text-black dark:bg-[#b3b3b3] relative">
-                    <audio src="/assets/music.mp3" controls class="w-[100%]"></audio>
-                    <a href="/assets/music.mp3" download class="absolute bottom-1 right-1">
-                        <img src="/images/download.png" alt="download_btn" height="28px" width="28px">
-                    </a>
-                </div>
-                <div class="flex align-middle">
-                    <div class="bg-black w-[100%] h-10 m-5 rounded-xl text-slate-200 flex justify-center items-center dark:bg-[#b3b3b3]">
-                        <p class="text-center text-neutral-400 dark:text-black">Ask me anything...</p>
-                    </div>
-                    <div class="mr-5 rounded-xl text-slate-200 flex justify-center items-center">
-                        <img src="/assets/up-arrow.png" alt="" width="42px">
-                    </div>
-                </div>
-            </div>
-            <p>New para</p>
-        </div>
     </div>
 </body>
 </html>
