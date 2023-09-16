@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@gradio/client": "^0.3.1"
+  },
+  "dependencies": {
+    "openai": "^4.7.1"
+  }
+}
