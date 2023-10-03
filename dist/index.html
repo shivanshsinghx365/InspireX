@@ -11,6 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/main.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
@@ -18,7 +26,7 @@
 <body>
     <div class="h-full   dark:bg-[#383838]">
             <!-- Navigation bar -->
-            <div class="flex w-[100%] bg-white text-black justify-between py-3 shadow-lg fixed top-0 dark:bg-[#232628] dark:text-white ">
+            <div class=" z-50 flex w-[100%] bg-white text-black justify-between py-3 shadow-lg fixed top-0 dark:bg-[#232628] dark:text-white ">
                 <div class="pl-5">
                     <img src="/images/ai.png" alt="" width="40px" height="40px">
                 </div>
@@ -37,8 +45,8 @@
             </div>
 
             <!-- Content part -->
-            <div class="p-10 pt-28 flex justify-around text-white ">
-                    <div class="text-black flex justify-center items-center dark:text-blue-50">
+            <div class="hiddenele p-10 pt-28 flex justify-around text-white">
+                    <div class="text-black flex flex-col justify-evenly dark:text-blue-50">
                         <div>
                             <h1 class="font-mono font-extrabold text-5xl leading-loose">
                                 Welcome to the New Era of<br>
@@ -47,6 +55,25 @@
                             <h1 class="bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent text-3xl font-bold font-ubuntu">
                                 Unleash Your Creativity with InspireX ...
                             </h1>
+                            <div>
+                                <a href="conversation.html" target="_blank">
+                                    <button class="bg-black text-white text-2xl px-4 py-2 rounded-full mt-10">
+                                        Get Started <span>↗️</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="flex gap-x-4">
+                                <div class="w-[200px]">
+                                    <h1 class="text-black dark:text-white text-3xl">Easy to use</h1>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="w-[200px]">
+                                    <h1 class="text-black dark:text-white text-3xl">Free Images</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="iphone flex flex-col justify-end h-[712px] w-[350px] rounded-[55px] shadow-xl overflow-hidden border-[12px] border-black bg-[#313335] dark:bg-[#f2f2f2]">
@@ -87,27 +114,35 @@
             </div>
 
             <!-- Content part2 -->
-            <div class="max-w-screen bg-black text-white max-w-screen">
-                <div class="w-1/2 p-10 py-16">
-                    <h1 class="font-bold text-4xl">We have the best AI Generator</h1>
-                    <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt tenetur deserunt sequi ad quidem 
-                       debitis! Ex labore excepturi molestiae cumque voluptatem est adipisci explicabo dolorem iusto sed, impedit
-                       quam, harum illo accusamus recusandae accusantium illum. Deleniti temporibus nulla sit.
-                    </p>
+            <div class="hiddenele max-w-screen dark:bg-white text-white max-w-screen  bg-[#383838] pb-10">
+                <div class="w-1/2 p-10 py-16 text-black text-center mx-auto">
+                    <h1 class="font-bold text-4xl text-white dark:text-black">We have the best AI Image Generator</h1>
                 </div>
-                <div>
-
+                <div class="w-10/12 flex h-[600px] gap-x-2 mx-auto justify-between">
+                    <div class="w-1/3">
+                        <img src="/images/disaster.jpeg" class="h-full w-full rounded-2xl object-fit">
+                    </div>
+                    <div class="w-1/3 flex flex-col h-full gap-y-2 box-border">
+                        <div class="h-1/2 w-full">
+                            <img src="/images/tree.jpeg" class="h-full w-full rounded-2xl object-fit">
+                        </div>
+                        <div class="h-1/2 w-full">
+                            <img src="/images/animal.jpeg" class="h-full w-full rounded-2xl object-fit">
+                        </div>
+                    </div>
+                    <div class="w-1/3">
+                        <img src="/images/scenery.jpeg" class="h-full w-full rounded-2xl object-fit">
+                    </div>
                 </div>
             </div>
 
             <!-- Frequenctly asked questions -->
-            <div class="max-w-screen bg-black  text-white dark:bg-white">
+            <div class="hiddenele max-w-screen bg-white  text-white ">
                 <div class="w-3/5  flex flex-col mx-auto p-10">
-                    <h1 class="text-bold text-center text-3xl dark:text-black">Frequently asked questions</h1>
-                    <p class="text-center text-xl py-3 dark:text-black">some frequently asked questions</p>
+                    <h1 class="text-bold text-center text-3xl dark:text-black text-black mb-16">Frequently asked questions</h1>
                     <div class="flex flex-row w-full gap-x-10 py-5">
                         <div class="flex flex-col gap-y-5 w-[45%]">
-                            <div onclick="unhide()" class="bg-[#282c2e] rounded-lg p-5 text-xl">
+                            <div onclick="unhide()" class=" bg-[#282c2e] rounded-lg p-5 text-xl">
                                 <div class="flex flex-row justify-between">
                                     <p class="py-2">What is the need of InspireX?</p>
                                     <div  class="py-3 cursor-pointer"><span id="plus"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#a322a5}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></span>
@@ -192,8 +227,38 @@
                 </div>
             </div>
 
+            <!-- Reviews -->
+            <div class="hiddenele reviews dark:bg-white bg-[#282c2e]">
+                <div class="title">
+                  <h2>Our Reviews</h2>
+                  <div class="underline"></div>
+                </div>
+                <article class="review dark:bg-[#282c2e] bg-white text-black dark:text-white">
+                  <div class="img-container">
+                    <img src="./person-1.jpeg" id="person-img" alt="" />
+                  </div>
+                  <h4 id="author">Sara Jones</h4>
+                  <p id="job">Ux Designer</p>
+                  <p id="info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                    excepturi rerum fugiat aperiam illo modi placeat nostrum dolore
+                    mollitia facere laudantium eos magni, molestiae, reiciendis tempore
+                    nihil ipsa! Ipsam, natus.
+                  </p>
+                  <div class="button-container">
+                    <button class="prev-btn">
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <button class="random-btn">Surprise</button>
+                </article>
+            </div>
+
             <!-- About section -->
-            <div class="w-[100%] p-10 bg-white dark:bg-[#282c2e]">
+            <div class="hiddenele w-[100%] p-10 bg-white dark:bg-[#282c2e]">
                 <div class="max-w-[80%] mx-auto flex justify-around text-black dark:text-white">
                     <div class="">
                         <div>
