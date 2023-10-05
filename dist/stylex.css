@@ -12,3 +12,6 @@ summary {
   details[open] > summary::before {
     transform: rotate(90deg);
   }
+  .queries::-webkit-scrollbar{
+    background-color: #232627;
+  }

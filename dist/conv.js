@@ -189,80 +189,13 @@ const info=(content)=>{
 		}
 	};
 
-		const response = fetch(url, options)
-		.then(response=>response.json())
-		.then(response=>{
-			console.log(response);
-			const res=response?.knowledge_panel?.description?.text;
-			const res2=response?.results[0]?.description;
-			console.log(res,res2);
-			ressec.innerText=res===undefined?res2:res;
-		})
-		.catch(err=>console.log(err))
-
+	// 	const response = fetch(url, options)
+	// 	.then(response=>response.json())
+	// 	.then(response=>{
+	// 		ressec.innerText=response?.results[0]?.description;
+	// 	})
+	// 	.catch(err=>console.log(err))
+	ressec.innerText="HNji";
 }
 
-
-click_to_record.addEventListener('click',function(){
-    var speech = true;
-    window.SpeechRecognition = window.webkitSpeechRecognition;
-
-    const recognition = new SpeechRecognition();
-    recognition.interimResults = true;
-
-    recognition.addEventListener('result', e => {
-        const transcript = Array.from(e.results)
-            .map(result => result[0])
-            .map(result => result.transcript)
-            .join('')
-        document.getElementById("context").innerHTML = transcript;
-		que.value=que.textContent;
-    });
-    
-    if (speech == true) {
-        recognition.start();
-    }
-})
-
-
-const sunIcon=document.querySelector(".sun");
-const moonIcon=document.querySelector(".moon");
-
-const userTheme=localStorage.getItem("theme");
-const systemTheme=window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-const Icontoggle=()=>{
-    moonIcon.classList.toggle("display-none");
-    sunIcon.classList.toggle("display-none");
-}
-
-const themecheck=()=>{
-    if(userTheme==="dark" || (!userTheme && systemTheme)){
-        document.documentElement.classList.add("dark");
-        moonIcon.classList.add("display-none");
-        return ;
-    }
-    else{
-        sunIcon.classList.add("display-none");
-    }
-}
-
-const themeswitch=()=>{
-    if(document.documentElement.classList.contains("dark")){
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme","light");
-        Icontoggle();
-        return ;
-    }
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme","dark");
-    Icontoggle();
-}
-
-sunIcon.addEventListener('click',()=>{
-    themeswitch();
-})
-moonIcon.addEventListener('click',()=>{
-    themeswitch();
-})
-themecheck();
+console.log("Kidaaa");
