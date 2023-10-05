@@ -199,6 +199,7 @@ const info=(content)=>{
 			ressec.innerText=res===undefined?res2:res;
 		})
 		.catch(err=>console.log(err))
+
 }
 
 
@@ -222,3 +223,46 @@ click_to_record.addEventListener('click',function(){
         recognition.start();
     }
 })
+
+
+const sunIcon=document.querySelector(".sun");
+const moonIcon=document.querySelector(".moon");
+
+const userTheme=localStorage.getItem("theme");
+const systemTheme=window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const Icontoggle=()=>{
+    moonIcon.classList.toggle("display-none");
+    sunIcon.classList.toggle("display-none");
+}
+
+const themecheck=()=>{
+    if(userTheme==="dark" || (!userTheme && systemTheme)){
+        document.documentElement.classList.add("dark");
+        moonIcon.classList.add("display-none");
+        return ;
+    }
+    else{
+        sunIcon.classList.add("display-none");
+    }
+}
+
+const themeswitch=()=>{
+    if(document.documentElement.classList.contains("dark")){
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme","light");
+        Icontoggle();
+        return ;
+    }
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme","dark");
+    Icontoggle();
+}
+
+sunIcon.addEventListener('click',()=>{
+    themeswitch();
+})
+moonIcon.addEventListener('click',()=>{
+    themeswitch();
+})
+themecheck();
