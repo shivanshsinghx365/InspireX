@@ -45,7 +45,7 @@
             </div>
 
             <!-- Content part -->
-            <div class="hiddenele p-10 pt-28 flex justify-around text-white">
+            <div class="hiddenele p-10 pt-28 flex max-[600px]:flex-col justify-around text-white">
                     <div class="text-black flex flex-col justify-evenly dark:text-blue-50">
                         <div>
                             <h1 class="font-mono font-extrabold text-5xl leading-loose">
@@ -67,7 +67,7 @@
                             <div class="flex gap-x-4">
                                 <div class="w-[200px]">
                                     <h1 class="text-black dark:text-white text-3xl">Easy to use</h1>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br></p>
                                 </div>
                                 <div class="w-[200px]">
                                     <h1 class="text-black dark:text-white text-3xl">Free Images</h1>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="iphone flex flex-col justify-end h-[712px] w-[350px] rounded-[55px] shadow-xl overflow-hidden border-[12px] border-black bg-[#313335] dark:bg-[#f2f2f2]">
+                    <div class="iphone flex flex-col justify-end h-[712px] w-[350px] rounded-[55px] shadow-xl overflow-hidden border-[12px] border-black bg-[#313335] dark:bg-[#f2f2f2] py-3">
                         <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#282c2e] text-sm mr-auto mx-2 mt-1 mb-1 dark:text-black dark:bg-[#e4e4e4]">
                             <p>Write a couplet on Computers</p>
                         </div>
@@ -118,30 +118,22 @@
                 <div class="w-1/2 p-10 py-16 text-black text-center mx-auto">
                     <h1 class="font-bold text-4xl text-white dark:text-black">We have the best AI Image Generator</h1>
                 </div>
-                <div class=" flex h-[600px] mx-2 justify-between">
-                    <div class="w-fit mx-2">
-                        <img src="/images/disaster.jpeg" class="h-full w-full rounded-2xl">
-                    </div>
-                    <div class="flex flex-col w-fit">
+                <div class=" flex mx-2 justify-between flex-grow">
+                    <div class="flex flex-col w-fit h-fit">
                         <div class="w-fit flex h-full gap-y-2 box-border">
                             <div class="w-fit mx-2">
-                                <img src="/images/tree.jpeg" class="h-fir w-fit rounded-2xl object-fill">
-                            </div>
-                            <div class="w-fit mx-2">
-                                <img src="/images/animal.jpeg" class="h-fit w-fit rounded-2xl object-fill">
-                            </div>
-                        </div>
-                        <div class="w-fit flex h-full gap-y-2 box-border">
-                            <div class="w-fit mx-2">
-                                <img src="/images/astronaut1.jpeg" class="h-fit w-fit rounded-2xl object-fill">
+                                <img src="/images/disaster.jpeg" class="h-full w-full rounded-2xl">
                             </div>
                             <div class="w-fit mx-2">
                                 <img src="/images/animagineXL.jpeg" class="h-fit w-fit rounded-2xl object-fill">
                             </div>
+                            <div class="w-fit mx-2 max-[600px]:hidden">
+                                <img src="/images/animagineXL.jpeg" class="h-fit w-fit rounded-2xl object-fill">
+                            </div>
+                            <div class="w-fit mx-2">
+                                <img src="/images/scenery.jpeg" class="h-full w-full rounded-2xl object-fit">
+                            </div>
                         </div>
-                    </div>
-                    <div class="w-fit mx-2">
-                        <img src="/images/scenery.jpeg" class="h-full w-full rounded-2xl object-fit">
                     </div>
                 </div>
             </div>
