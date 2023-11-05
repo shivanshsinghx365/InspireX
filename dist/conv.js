@@ -1,75 +1,41 @@
-// import { client } from "../node_modules/@gradio/client/dist/index.js";
+var imgg=document.querySelector("#imgg");
+const API_KEY="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";
 
-// // // Inference APIs
+async function fetchdata(input){
+    const response = await fetch(
+        "https://api-inference.huggingface.co/models/prompthero/openjourney",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+          },
+          body: JSON.stringify({ inputs: input }),
+        }
+      );
+    
+      if (!response.ok) {
+          throw new Error("Failed to generate image");
+        }
+        const blob = await response.blob();
+        console.log(URL.createObjectURL(blob));
 
-// async function query(data) {
-// 	const response = await fetch(
-// 		"https://api-inference.huggingface.co/models/bigscience/bloomz-1b1",
-// 		{
-// 			headers: { Authorization: "Bearer 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" },
-// 			method: "POST",
-// 			body: JSON.stringify(data),
-// 		}
-// 	);
-// 	const result = await response.json();
-// 	return result;
-// }
-
-// // query({"inputs": "i AM GOING TO RUN WITH MY "}).then((response) => {
-// // 	console.log(JSON.stringify(response));
-// // });
-
-
-// // // // Huggingface Spaces
-
-// // // const response_0 = await fetch("https://raw.githubusercontent.com/makccr/wallpapers/master/wallpapers/animals/portrait-of-a-flying-falcon-on-a-black-background-illustration-vector.jpg");
-// // // const exampleImage = await response_0.blob();
-						
-// // // const app = await client("https://artificialguybr-qwen-vl.hf.space/");
-// // // const result = await app.predict("/predict", [
-// // // 				exampleImage, 	// blob in 'Image Input' Image component		
-// // // 				"Generate a caption for that image:", // string  in 'Prompt' Textbox component		
-// // // 				"No", // string  in 'With Grounding' Radio component
-// // // 	]);
+        imgg.src=URL.createObjectURL(blob);
+}
 
 
-// // // // GPT
-// // // // This code is for v4 of the openai package: npmjs.com/package/openai
-
-// import OpenAI from '../node_modules/openai';
-
-// const openai1 = new OpenAI({
-//   apiKey: "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",
-// });
-
-// async function main(){
-// 	const response=await openai1.chat.completions.create({
-// 		model: "gpt-3.5-turbo-0613",
-// 		messages: [
-// 		  {
-// 			role: "user",
-// 			content: "What is cp"
-// 		  }
-// 		],
-// 		temperature: 1,
-// 		max_tokens: 256,
-// 		top_p: 1,
-// 		frequency_penalty: 0,
-// 		presence_penalty: 0,
-// 	});
-
-// 	console.log(response.choices);
-// }
-
-// const a=document.createElement(".div");
-// a.innerText="Hello";
-// console.log(a);
-
-
-// main();
-
+var init=true;
 
 const btn=document.querySelector("#getdatabtn");
+const imggeb=document.querySelector("#img_gen");
+// imggen krn wele false
+imggeb.addEventListener('click',()=>{
+	init=false;
+})
+btn.addEventListener('click',()=>{
+	init=true;
+})
+
 const que=document.querySelector("#context");
 var quesec=document.querySelector("#que-sec");
 var ressec=document.querySelector("#res-sec");
@@ -85,9 +51,29 @@ btn.addEventListener('click',()=>{
 		addnewres();
 		quesec.id=null;
 		ressec.id=null;
+		imgg.id=null;
 		quesec=document.querySelector("#que-sec");
 		ressec=document.querySelector("#res-sec");
-	}, 3500);
+		imgg=document.querySelector("#imgg");
+	}, 10000);
+});
+
+imggeb.addEventListener('click',()=>{
+	const text=que.value;
+	quesec.innerText=que.value;
+	info(que.value);
+	que.value="";
+	setTimeout(() => {
+		addnewquery();
+		addnewres();
+		quesec.id=null;
+		ressec.id=null;
+		imgg.id=null;
+		quesec=document.querySelector("#que-sec");
+		ressec=document.querySelector("#res-sec");
+		imgg=document.querySelector("#imgg");
+		init=true;
+	}, 10000);
 });
 
 context.addEventListener('keypress',function(e){
@@ -100,9 +86,11 @@ context.addEventListener('keypress',function(e){
 			addnewres();
 			quesec.id=null;
 			ressec.id=null;
+			imgg.id=null;
 			quesec=document.querySelector("#que-sec");
 			ressec=document.querySelector("#res-sec");
-		}, 3500);
+			imgg=document.querySelector("#imgg");
+		}, 10000);
 	}
 });
         
@@ -155,6 +143,11 @@ function addnewres(){
 	newChildElement112.className="p-1 text-xl";
 	newChildElement112.id="res-sec";
 
+	const newimg=document.createElement("img");
+	newimg.id="imgg";
+
+	newChildElement112.appendChild(newimg);
+
 	newChildElement11.appendChild(newChildElement111);
 	newChildElement11.appendChild(newChildElement112);
 
@@ -180,22 +173,94 @@ function addnewres(){
 
 
 const info=(content)=>{
-	const url = `https://google-web-search1.p.rapidapi.com/?query=${content}&limit=20&related_keywords=true`;
-	const options = {
-		method: 'GET',
-		headers: {
-			'X-RapidAPI-Key': '58caa4f29dmsh727b69017c5d2aap153d99jsndcacdee00282',
-			'X-RapidAPI-Host': 'google-web-search1.p.rapidapi.com'
-		}
-	};
+	if(init){
+		const url = `https://google-web-search1.p.rapidapi.com/?query=${content}&limit=20&related_keywords=true`;
+		const options = {
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': '58caa4f29dmsh727b69017c5d2aap153d99jsndcacdee00282',
+				'X-RapidAPI-Host': 'google-web-search1.p.rapidapi.com'
+			}
+		};
 
-	// 	const response = fetch(url, options)
-	// 	.then(response=>response.json())
-	// 	.then(response=>{
-	// 		ressec.innerText=response?.results[0]?.description;
-	// 	})
-	// 	.catch(err=>console.log(err))
-	ressec.innerText="HNji";
+			const response = fetch(url, options)
+			.then(response=>response.json())
+			.then(response=>{
+				console.log(response);
+				const res=response?.knowledge_panel?.description?.text;
+				const res2=response?.results[0]?.description;
+				console.log(res,res2);
+				ressec.innerText=res===undefined?res2:res;
+			})
+			.catch(err=>console.log(err))
+	}
+	else{
+		fetchdata(content);
+	}
+
 }
 
-console.log("Kidaaa");
+
+click_to_record.addEventListener('click',function(){
+    var speech = true;
+    window.SpeechRecognition = window.webkitSpeechRecognition;
+
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
+
+    recognition.addEventListener('result', e => {
+        const transcript = Array.from(e.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join('')
+        document.getElementById("context").innerHTML = transcript;
+		que.value=que.textContent;
+    });
+    
+    if (speech == true) {
+        recognition.start();
+    }
+})
+
+
+const sunIcon=document.querySelector(".sun");
+const moonIcon=document.querySelector(".moon");
+
+const userTheme=localStorage.getItem("theme");
+const systemTheme=window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const Icontoggle=()=>{
+    moonIcon.classList.toggle("display-none");
+    sunIcon.classList.toggle("display-none");
+}
+
+const themecheck=()=>{
+    if(userTheme==="dark" || (!userTheme && systemTheme)){
+        document.documentElement.classList.add("dark");
+        moonIcon.classList.add("display-none");
+        return ;
+    }
+    else{
+        sunIcon.classList.add("display-none");
+    }
+}
+
+const themeswitch=()=>{
+    if(document.documentElement.classList.contains("dark")){
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme","light");
+        Icontoggle();
+        return ;
+    }
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme","dark");
+    Icontoggle();
+}
+
+sunIcon.addEventListener('click',()=>{
+    themeswitch();
+})
+moonIcon.addEventListener('click',()=>{
+    themeswitch();
+})
+themecheck();
