@@ -5,18 +5,20 @@ const userTheme=localStorage.getItem("theme");
 const systemTheme=window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 const Icontoggle=()=>{
-    moonIcon.classList.toggle("display-none");
-    sunIcon.classList.toggle("display-none");
+    moonIcon.classList.toggle("hidden");
+    sunIcon.classList.toggle("hidden");
 }
 
 const themecheck=()=>{
     if(userTheme==="dark" || (!userTheme && systemTheme)){
         document.documentElement.classList.add("dark");
-        moonIcon.classList.add("display-none");
+        moonIcon.classList.add("hidden");
+        sunIcon.classList.remove("hidden");
         return ;
     }
     else{
-        sunIcon.classList.add("display-none");
+        moonIcon.classList.remove("hidden");
+        sunIcon.classList.add("hidden");
     }
 }
 
