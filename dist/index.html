@@ -1,0 +1,303 @@
+<!-- npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="/dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/main.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+
+<body>
+    <div class="h-full   dark:bg-[#383838]">
+            <!-- Navigation bar -->
+            <div class=" z-50 flex w-[100%] bg-white text-black justify-between py-3 shadow-lg fixed top-0 dark:bg-[#232628] dark:text-white ">
+                <div class="pl-5">
+                    <img src="/images/ai.png" alt="" width="40px" height="40px">
+                </div>
+                <div class="flex w-[25%] justify-between py-1 px-7 text-xl">
+                    <div>Home</div>
+                    <div>Features</div>
+                    <div>Team</div>
+                    <div class=" cursor-pointer">
+                       <img class="sun " src="/images/sun.png" width="30" height="30">
+                       <img class="moon " src="/images/moon.jpeg" width="30" height="30">
+                    </div>
+                    <div class="text-white rounded-3xl px-4 bg-gradient-to-r from-blue-400 to-purple-700 cursor-pointer">
+                        <div>Login</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content part -->
+            <div class="hiddenele p-10 pt-28 flex max-[600px]:flex-col justify-around text-white">
+                    <div class="text-black flex flex-col justify-evenly dark:text-blue-50">
+                        <div>
+                            <h1 class="font-mono font-extrabold text-5xl leading-loose">
+                                Welcome to the New Era of<br>
+                                <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" class="underline decoration-sky-500">#AI</a>
+                            </h1>
+                            <h1 class="bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent text-3xl font-bold font-ubuntu">
+                                Unleash Your Creativity with InspireX ...
+                            </h1>
+                            <div>
+                                <a href="conversation.html" target="_blank">
+                                    <button class="bg-black text-white text-2xl px-4 py-2 rounded-full mt-10">
+                                        Get Started <span>↗️</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="flex gap-x-4">
+                                <div class="w-[200px]">
+                                    <h1 class="text-black dark:text-white text-3xl">Easy to use</h1>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br></p>
+                                </div>
+                                <div class="w-[200px]">
+                                    <h1 class="text-black dark:text-white text-3xl">Free Images</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone flex flex-col justify-end h-[712px] w-[350px] rounded-[55px] shadow-xl overflow-hidden border-[12px] border-black bg-[#313335] dark:bg-[#f2f2f2] py-3">
+                        <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#282c2e] text-sm mr-auto mx-2 mt-1 mb-1 dark:text-black dark:bg-[#e4e4e4]">
+                            <p>Write a couplet on Computers</p>
+                        </div>
+                        <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm ml-auto mx-2 mt-1 mb-1 w-[90%]  dark:text-black dark:bg-[#b3b3b3]">
+                            <p>In circuits dance, logic's symphony hums,<br>
+                                Silicon minds weave dreams, where the future becomes.</p>
+                        </div>
+                        <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#2a2e30] text-sm mr-auto mx-2 mt-1 mb-1  dark:text-black dark:bg-[#e4e4e4]">
+                            <p>A cute puppy astronaut, 3d</p>
+                        </div>
+                        <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm align ml-auto mt-1 mx-2 mb-1  dark:text-black dark:bg-[#b3b3b3] relative">
+                            <img src="/images/puppy.jpeg" alt="a cute little puppy" class="rounded-2xl" width="175px">
+                            <a href="/images/puppy.jpeg" download class="absolute bottom-1 right-1">
+                                <img src="/images/download.png" alt="download_btn" height="28px" width="28px">
+                            </a>
+                        </div>
+                        <div class="rounded-r-3xl rounded-t-3xl p-2 bg-[#2a2e30] text-sm mr-auto mx-2 mt-1 mb-1  dark:text-black dark:bg-[#e4e4e4]">
+                            <p>music for studying, peaceful edm</p>
+                        </div>
+                        <div class="rounded-tr-3xl rounded-l-3xl p-2 bg-[#141618] text-sm align ml-auto mt-1 mx-2 mb-1 w-[90%]  dark:text-black dark:bg-[#b3b3b3] relative">
+                            <audio src="/assets/music.mp3" controls class="w-[100%]"></audio>
+                            <a href="/assets/music.mp3" download class="absolute bottom-1 right-1">
+                                <img src="/images/download.png" alt="download_btn" height="28px" width="28px">
+                            </a>
+                        </div>
+                        <div class="flex align-middle">
+                            <div class="bg-black w-[100%] h-10 m-5 rounded-xl text-slate-200 flex justify-center items-center dark:bg-[#b3b3b3]">
+                                <p class="text-center text-neutral-400 dark:text-black">Ask me anything...</p>
+                            </div>
+                            <div class="mr-5 rounded-xl text-slate-200 flex justify-center items-center">
+                                <img src="/assets/up-arrow.png" alt="" width="42px">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Content part2 -->
+            <div class="hiddenele max-w-screen dark:bg-white text-white max-w-screen  bg-[#383838] pb-10">
+                <div class="w-1/2 p-10 py-16 text-black text-center mx-auto">
+                    <h1 class="font-bold text-4xl text-white dark:text-black">We have the best AI Image Generator</h1>
+                </div>
+                <div class=" flex mx-2 justify-between flex-grow">
+                    <div class="flex flex-col w-fit h-fit">
+                        <div class="w-fit flex h-full gap-y-2 box-border">
+                            <div class="w-fit mx-2">
+                                <img src="/images/disaster.jpeg" class="h-full w-full rounded-2xl">
+                            </div>
+                            <div class="w-fit mx-2">
+                                <img src="/images/animagineXL.jpeg" class="h-fit w-fit rounded-2xl object-fill">
+                            </div>
+                            <div class="w-fit mx-2 max-[600px]:hidden">
+                                <img src="/images/animagineXL.jpeg" class="h-fit w-fit rounded-2xl object-fill">
+                            </div>
+                            <div class="w-fit mx-2">
+                                <img src="/images/scenery.jpeg" class="h-full w-full rounded-2xl object-fit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frequenctly asked questions -->
+            <div class="hiddenele max-w-screen bg-white  text-white ">
+                <div class="w-3/5  flex flex-col mx-auto p-10">
+                    <h1 class="text-bold text-center text-3xl dark:text-black text-black mb-16">Frequently asked questions</h1>
+                    <div class="flex flex-row w-full gap-x-10 py-5">
+                        <div class="flex flex-col gap-y-5 w-[45%]">
+                            <div onclick="unhide()" class=" bg-[#282c2e] rounded-lg p-5 text-xl">
+                                <div class="flex flex-row justify-between">
+                                    <p class="py-2">What is the need of InspireX?</p>
+                                    <div  class="py-3 cursor-pointer"><span id="plus"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#a322a5}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></span>
+                                    <span class="flex hidden" id=minus><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b14ea9}</style><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span></div>
+                                </div>
+                                <div class="flex justify-between hidden" id="hidden-text">
+                                    <p>Lorem ipsum doo odit 
+                                        pariatur laboriosam animi voluptatibus ea quasi quibusdam eos fuga molestias, harum ducimus 
+                                        s.</p>
+                                        <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <div onclick="unhide1()" class="bg-[#282c2e] rounded-lg p-5 text-xl">
+                                <div class="flex flex-row justify-between">
+                                    <p class="py-2">Is inspireX able to generate images?</p>
+                                    <div class="py-3 cursor-pointer"><span id="plus1"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#a322a5}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></span>
+                                        <span class="flex hidden" id=minus1><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b14ea9}</style><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span></div>
+                                </div>
+                                <div class="flex justify-between hidden" id="hidden-text1">
+                                    <p>Lorem ipsum doo odit 
+                                        pariatur laboriosam animi voluptatibus ea quasi quibusdam eos fuga molestias, harum ducimus 
+                                        s.</p>
+                                    <img src="">
+                                </div>
+                            </div>
+                            <div onclick="unhide2()" class="bg-[#282c2e] rounded-lg p-5 text-xl">
+                                <div class="flex flex-row justify-between">
+                                    <p class="py-2">Is inspireX able to generate images?</p>
+                                    <div class="py-3 cursor-pointer"><span id="plus2"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#a322a5}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></span>
+                                        <span class="flex hidden" id=minus2><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b14ea9}</style><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span></div>
+                                </div>
+                                <div class="flex justify-between hidden" id="hidden-text2">
+                                    <p>Lorem ipsum doo odit 
+                                        pariatur laboriosam animi voluptatibus ea quasi quibusdam eos fuga molestias, harum ducimus 
+                                        s.</p>
+                                    <img src="">
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="flex flex-col gap-y-5 w-[45%]">
+                            <div onclick="unhide3()" class=" bg-[#282c2e] rounded-lg p-5 text-xl">
+                                <div class="flex flex-row justify-between">
+                                    <p class="py-2">Is inspireX able to generate images?</p>
+                                    <div class="py-3 cursor-pointer"><span id="plus3"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#a322a5}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></span>
+                                        <span class="flex hidden" id=minus3><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b14ea9}</style><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span></div>
+                                </div>
+                                <div class="flex justify-between hidden" id="hidden-text3">
+                                    <p>Lorem ipsum doo odit 
+                                        pariatur laboriosam animi voluptatibus ea quasi quibusdam eos fuga molestias, harum ducimus 
+                                        s.</p>
+                                    <img src="">
+                                </div>
+                            </div>
+                            <div onclick="unhide4()" class="bg-[#282c2e] rounded-lg p-5 text-xl">
+                                <div class="flex flex-row justify-between">
+                                    <p class="py-2">Is inspireX able to generate images?</p>
+                                    <div  class="py-3 cursor-pointer"><span id="plus4"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#a322a5}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></span>
+                                        <span class="flex hidden" id=minus4><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b14ea9}</style><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span></div>
+                                </div>
+                                <div class="flex justify-between hidden" id="hidden-text4">
+                                    <p>Lorem ipsum doo odit 
+                                        pariatur laboriosam animi voluptatibus ea quasi quibusdam eos fuga molestias, harum ducimus 
+                                        s.</p>
+                                    <img src="">
+                                </div>
+                            </div>
+                            <div onclick="unhide5()" class="bg-[#282c2e] rounded-lg p-5 text-xl">
+                                <div class="flex flex-row justify-between">
+                                    <p class="py-2">Is inspireX able to generate images?</p>
+                                    <div class="py-3 cursor-pointer"><span id="plus5"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#a322a5}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></span>
+                                        <span class="flex hidden" id=minus5><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b14ea9}</style><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span></div>
+                                </div>
+                                <div class="flex justify-between hidden" id="hidden-text5">
+                                    <p>Lorem ipsum doo odit 
+                                        pariatur laboriosam animi voluptatibus ea quasi quibusdam eos fuga molestias, harum ducimus 
+                                        s.</p>
+                                    <img src="">
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews -->
+            <div class="hiddenele reviews dark:bg-white bg-[#282c2e]">
+                <div class="title">
+                  <h2>Our Reviews</h2>
+                  <div class="underline"></div>
+                </div>
+                <article class="review dark:bg-[#282c2e] bg-white text-black dark:text-white">
+                  <div class="img-container">
+                    <img src="./person-1.jpeg" id="person-img" alt="" />
+                  </div>
+                  <h4 id="author">Sara Jones</h4>
+                  <p id="job">Ux Designer</p>
+                  <p id="info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                    excepturi rerum fugiat aperiam illo modi placeat nostrum dolore
+                    mollitia facere laudantium eos magni, molestiae, reiciendis tempore
+                    nihil ipsa! Ipsam, natus.
+                  </p>
+                  <div class="button-container">
+                    <button class="prev-btn">
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <button class="random-btn">Surprise</button>
+                </article>
+            </div>
+
+            <!-- About section -->
+            <div class="hiddenele w-[100%] p-10 bg-white dark:bg-[#282c2e]">
+                <div class="max-w-[80%] mx-auto flex justify-around text-black dark:text-white">
+                    <div class="">
+                        <div>
+                            <img src="/images/ai.png" width="60" height="60">
+                        </div>
+                        <p class=" font-bold text-2xl text-center">InspireX</p>
+                    </div>
+                    <div class="">
+                        <h4 class="text-xl font-semibold mb-5">Menu</h4>
+                        <div class="flex flex-col gap-y-3 text-xl">
+                        <p><a class="cursor-pointer hover:underline">About</a></p>
+                        <p><a class="cursor-pointer hover:underline">Features</a></p>
+                        <p><a class="cursor-pointer hover:underline">Team</a></p>
+                        <p><a class="cursor-pointer hover:underline">Contact</a></p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h4 class="text-xl font-semibold mb-5">Services</h4>
+                        <div class="flex flex-col gap-y-3 text-xl">
+                        <p><a class=" cursor-pointer hover:underline">Privacy Policy</a></p>
+                        <p><a class=" cursor-pointer hover:underline">Terms of use</a></p>
+                        <p><a class=" cursor-pointer hover:underline">Refund and Cancellation</a></p>
+                        </div>
+                    </div>
+                    <div class=" w-[2px] h-60 bg-black dark:bg-white"></div>
+                    <div class="flex flex-col text-xl gap-y-6">
+                        <p class=" font-semibold">
+                            GET IN TOUCH
+                        </p>
+                        <p>
+                            <a href="mailto:kyabnarhahu@gmail.com">Email:inspirex@gmail.in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+</html>
