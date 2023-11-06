@@ -55,7 +55,7 @@ btn.addEventListener('click',()=>{
 		quesec=document.querySelector("#que-sec");
 		ressec=document.querySelector("#res-sec");
 		imgg=document.querySelector("#imgg");
-	}, 10000);
+	}, 12000);
 });
 
 imggeb.addEventListener('click',()=>{
