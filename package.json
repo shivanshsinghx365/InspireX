@@ -4,7 +4,7 @@
     "@gradio/client": "^0.3.1"
   },
   "dependencies": {
-    "axios": "^1.5.1",
+    "axios": "^1.6.0",
     "cheerio": "^1.0.0-rc.12",
     "jsdom": "^22.1.0",
     "openai": "^4.11.0",
