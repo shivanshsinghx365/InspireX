@@ -15,3 +15,6 @@ summary {
   .queries::-webkit-scrollbar{
     background-color: #232627;
   }
+  .hidd{
+    display: flex;
+  }
