@@ -55,7 +55,7 @@ btn.addEventListener('click',()=>{
 		quesec=document.querySelector("#que-sec");
 		ressec=document.querySelector("#res-sec");
 		imgg=document.querySelector("#imgg");
-	}, 12000);
+	}, 10000);
 });
 
 imggeb.addEventListener('click',()=>{
@@ -264,3 +264,15 @@ moonIcon.addEventListener('click',()=>{
     themeswitch();
 })
 themecheck();
+
+const hamico=document.querySelector("#hamicon");
+const hamibt=document.querySelector("#hambtn");
+const hambt2=document.querySelector("#hambtn2");
+
+hamibt.addEventListener('click',()=>{
+	hamico.className="flex-col text-center h-fit p-2 relative top-1 -left-6 text-sm rounded-md bg-purple-600 gap-y-1 flex";
+});
+hambt2.addEventListener('click',()=>{
+	hamico.className="flex-col text-center h-fit p-2 relative top-1 -left-6 text-sm rounded-md bg-purple-600 gap-y-1 flex hidden";
+})
+
