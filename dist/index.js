@@ -236,5 +236,3 @@ const reviews = [
     });
     const hiddenele=document.querySelectorAll(".hiddenele");
     hiddenele.forEach((el)=>observer.observe(el));
-
-
