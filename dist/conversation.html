@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="flex bg-[#141618] text-white  p-4 text-3xl h-[100vh] w-[100vw] box-border">
-        <div class="w-[20%] flex flex-col">
+        <div class="w-[20%] lg:flex md:flex flex-col sm:hidden x-sm:hidden">
             <div>
                 <div class="rounded-md p-3 bg-[#2a2e30] text-xl mx-2 my-3 cursor-pointer">💬 Chats</div>
                 <div class="rounded-md p-3 bg-[#2a2e30] text-xl mx-2 my-3 cursor-pointer">🔍 Search</div>
@@ -31,7 +31,7 @@
                 <div class="bg-[#232627] p-2 rounded-md flex flex-col my-5 h-25 justify-end">
                     <div class="rounded-md text-center w-[100%] h-[100%] cursor-pointer mb-2 flex py-2 px-1">
                         <div class="relative rounded-full overflow-hidden mr-2">
-                            <img src="/images/astronaut.jpeg" alt="avatar" height="132" width="132">
+                            <img src="/images/puppy.jpeg" alt="avatar" class="h-12 w-28">
                         </div>
                         <div class="text-sm flex flex-col text-left mx-2 mr-3">
                             <div>Random Guy</div>
@@ -47,6 +47,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="sm:flex x-sm:flex md:hidden lg:hidden">
+            <button id="hambtn" class="w-fit h-fit cursor-pointer"><img src="../images/icons8-menu-50.png" class="w-5 h-5 mr-5 mt-1 text-white"></button>
+            <div id="hamicon"  class= "flex-col text-center h-fit p-2 relative top-1 -left-6 text-sm rounded-md bg-purple-600 gap-y-1 flex">
+                <div id="hambtn2"><img src="../images/close.png" class="w-2 h-2"/></div>
+                <div class="cursor-pointer p-1 rounded-md hover:text-md hover:underline bg-green-700"><span>Chats</span></div>
+                <div class="cursor-pointer p-1 rounded-md hover:text-md hover:underline bg-green-700"><span>Search</span></div>
+                <div class="cursor-pointer p-1 rounded-md hover:text-md hover:underline bg-green-700"><span>Settings</span></div>
+                <div class="cursor-pointer p-1 rounded-md hover:text-md hover:underline bg-green-700"><span>Updates</span></div>
+            </div>
+        </div>
         <div class="bg-white dark:bg-[#232627] h-[100%] w-[100%] box-border rounded-md flex flex-col">
 
             <div class="flex flex-col justify-end h-[100%] py-2">
@@ -58,7 +69,7 @@
                             <div id="que-sec" class="p-1 text-xl "></div>
                             <p class="text-3xl ml-3 mr-1 flex justify-center items-center">☕</p>
                         </div>
-                        <div class="absolute -bottom-4 right-5 bg-[#404445] rounded-md px-3 py-1 cursor-pointer">
+                        <div class="absolute -bottom-4 right-5 bg-[#404445] rounded-md px-3 py-1 cursor-pointer sm:hidden x-sm:hidden">
                             Edit ✏️
                         </div>
                     </div>
@@ -71,14 +82,23 @@
                             </div>
                             
                         </div>
-                        <div class="absolute -bottom-4 right-5 bg-[#404445] rounded-md px-3 py-1 cursor-pointer">
+                        <div class="absolute -bottom-4 right-5 bg-[#404445] rounded-md px-3 py-1 cursor-pointer sm:hidden x-sm:hidden lg:flex md:flex">
                             Regenerate 🔁
                         </div>
-                        <div class="absolute -bottom-4 right-[9.5rem] bg-[#404445] rounded-md px-3 py-1 cursor-pointer">
+                        <div class="absolute -bottom-4 right-[9.5rem] bg-[#404445] rounded-md px-3 py-1 cursor-pointer sm:hidden x-sm:hidden lg:flex md:flex">
                             Copy 📑
                         </div>
-                        <div class="absolute -bottom-4 right-[15rem] bg-[#404445] rounded-md px-3 py-1 cursor-pointer">
+                        <div class="absolute -bottom-4 right-[15rem] bg-[#404445] rounded-md px-3 py-1 cursor-pointer sm:hidden x-sm:hidden lg:flex md:flex">
                             Download ⬇️
+                        </div>
+                        <div class="absolute -bottom-4 right-5 bg-[#404445] rounded-md px-3 py-1 cursor-pointer lg:hidden md:hidden">
+                            🔁
+                        </div>
+                        <div class="absolute -bottom-4 right-[9.5rem] bg-[#404445] rounded-md px-3 py-1 cursor-pointer lg:hidden md:hidden">
+                            📑
+                        </div>
+                        <div class="absolute -bottom-4 right-[15rem] bg-[#404445] rounded-md px-3 py-1 cursor-pointer lg:hidden md:hidden">
+                            ⬇️
                         </div>
                     </div>
                     
@@ -87,9 +107,9 @@
                 <div class="mt-3 text-2xl rounded-xl flex justify-between  border-[1px] border-solid border-[#6e7273] mx-3">
                     <button class="bg-[#6e7273] p-2 m-3 rounded-full">➕</button>
                     <input id="context" class="bg-transparent text-white dark:text-[#6e7273] p-2 m-3 pl-3 w-[100%] rounded-xl placeholder " placeholder="Ask anything..." value="">
-                    <button id="getdatabtn" class="bg-[#6e7273] p-2 m-3 rounded-xl">⏩</button>
-                    <button id="click_to_record" class="bg-[#6e7273] p-2 m-3 rounded-xl">🔉</button>
-                    <button id="img_gen" class="bg-[#6e7273] p-2 m-3 rounded-xl">🖼️</button>
+                    <button id="getdatabtn" class="lg:bg-[#6e7273] p-2 m-3 rounded-xl sm:m-1 sm:p-1 x-sm:m-1 x-sm:p-1 ">⏩</button>
+                    <button id="click_to_record" class="bg-[#6e7273] p-2 m-3 rounded-xl sm:m-1 sm:p-1 x-sm:m-1 x-sm:p-1">🔉</button>
+                    <button id="img_gen" class="bg-[#6e7273] p-2 m-3 rounded-xl sm:m-1 sm:p-1 x-sm:m-1 x-sm:p-1">🖼️</button>
                 </div>
 
             </div>
