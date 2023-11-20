@@ -270,9 +270,9 @@ const hamibt=document.querySelector("#hambtn");
 const hambt2=document.querySelector("#hambtn2");
 
 hamibt.addEventListener('click',()=>{
-	hamico.className="flex-col text-center h-fit p-2 relative top-1 -left-6 text-sm rounded-md bg-purple-600 gap-y-1 flex";
+	hamico.className="flex-col text-center h-fit p-2 relative top-1 -left-6 text-sm rounded-md bg-[#232627] gap-y-1 flex";
 });
 hambt2.addEventListener('click',()=>{
-	hamico.className="flex-col text-center h-fit p-2 relative top-1 -left-6 text-sm rounded-md bg-purple-600 gap-y-1 flex hidden";
+	hamico.className="flex-col text-center h-fit p-2 relative top-1 -left-6 text-sm rounded-md bg-[#232627] gap-y-1 flex hidden";
 })
 
